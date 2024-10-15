@@ -1,4 +1,3 @@
-// students table name
 async function main(req,res){
     // const {id,name,city,marks,misc}=req.body;
     const {get_pg_connection}=require('../base/pg_connector');
