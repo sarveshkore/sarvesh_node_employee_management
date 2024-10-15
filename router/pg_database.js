@@ -19,5 +19,10 @@ module.exports=function(app){
         const postgres_delete_api = require(__dirname+"/../src/pg_sql_db/delete_api_pg");
         postgres_delete_api.main(req,res);
     })
+
+    app.delete("/api/v1/pg_sql_db/drop_table_api_pg",function(req,res){
+        const postgres_delete_api = require(__dirname+"/../src/pg_sql_db/drop_table_api_pg");
+        postgres_delete_api.main(req,res);
+    })
     
     }
