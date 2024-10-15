@@ -33,7 +33,7 @@
             } else{
                 console.log(data.rows,'Created');
                 // res.send(data.rows);
-                console.log('run');
+                // console.log('run');
                 
                 res.send("Value Deleted Sucessfully!!");
             }
@@ -41,7 +41,7 @@
         }
     );
     // await client.end()
-    res.send('result')
+    // res.send('result')
         // console.log(result);
     }
     module.exports={
