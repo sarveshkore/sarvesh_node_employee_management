@@ -1,0 +1,229 @@
+      {
+          "s_id": "1",
+          "s_name": "sarvesh",
+          "city": "Mumbai",
+          "marks": "79",
+          "misc": {
+              "std_10": [
+                  {
+                      "s10_marks": 65,
+                      "s10_school": "S. M. Shetty",
+                      "board_university": "state"
+                  }
+              ],
+              "std_12": [
+                  {
+                      "s12_marks": 60,
+                      "s12_school": "Pune Vidya Bhavan",
+                      "board_university": "state"
+                  }
+              ]
+          }
+      }
+
+      {
+          "s_id": "2",
+          "s_name": "shekhar",
+          "city": "Mumbai",
+          "marks": "89",
+          "misc": {
+              "std_10": [
+                  {
+                      "s10_marks": 65,
+                      "s10_school": "S. M. Shetty",
+                      "board_university": "state"
+                  }
+              ],
+              "std_12": [
+                  {
+                      "s12_marks": 60,
+                      "s12_school": "Pune Vidya Bhavan",
+                      "board_university": "state"
+                  }
+              ]
+          }
+      }
+
+          {
+          "s_id": "3",
+          "s_name": "Aditi",
+          "city": "Pune",
+          "marks": "88",
+          "misc": {
+              "std_10": [
+                  {
+                      "s10_marks": 80,
+                      "s10_school": "Vidya Niketan",
+                      "board_university": "state"
+                  }
+              ],
+              "std_12": [
+                  {
+                      "s12_marks": 85,
+                      "s12_school": "Symbiosis College",
+                      "board_university": "state"
+                  }
+              ]
+          }
+          }
+
+      {
+          "s_id": "4",
+          "s_name": "Priya",
+          "city": "Chennai",
+          "marks": "90",
+          "misc": {
+              "std_10": [
+                  {
+                      "s10_marks": 78,
+                      "s10_school": "St. Thomas School",
+                      "board_university": "ICSE"
+                  }
+              ],
+              "std_12": [
+                  {
+                      "s12_marks": 87,
+                      "s12_school": "Presidency College",
+                      "board_university": "state"
+                  }
+              ]
+          }
+      }
+
+          {
+          "s_id": "5",
+          "s_name": "Vikas",
+          "city": "Hyderabad",
+          "marks": "85",
+          "misc": {
+              "std_10": [
+                  {
+                      "s10_marks": 69,
+                      "s10_school": "Little Flower High School",
+                      "board_university": "state"
+                  }
+              ],
+              "std_12": [
+                  {
+                      "s12_marks": 78,
+                      "s12_school": "Narayana Junior College",
+                      "board_university": "state"
+                  }
+              ]
+          }
+      }
+
+          {
+          "s_id": "6",
+          "s_name": "Rohit",
+          "city": "Bangalore",
+          "marks": "92",
+          "misc": {
+              "std_10": [
+                  {
+                      "s10_marks": 85,
+                      "s10_school": "National Public School",
+                      "board_university": "CBSE"
+                  }
+              ],
+              "std_12": [
+                  {
+                      "s12_marks": 88,
+                      "s12_school": "Christ Junior College",
+                      "board_university": "state"
+                  }
+              ]
+          }
+      }
+
+      {
+          "s_id": "7",
+          "s_name": "Suman",
+          "city": "Kolkata",
+          "marks": "86",
+          "misc": {
+              "std_10": [
+                  {
+                      "s10_marks": 76,
+                      "s10_school": "South Point High School",
+                      "board_university": "state"
+                  }
+              ],
+              "std_12": [
+                  {
+                      "s12_marks": 81,
+                      "s12_school": "St. Xavier's College",
+                      "board_university": "state"
+                  }
+              ]
+          }
+      }
+
+          {
+          "s_id": "8",
+          "s_name": "Raj",
+          "city": "Ahmedabad",
+          "marks": "83",
+          "misc": {
+              "std_10": [
+                  {
+                      "s10_marks": 70,
+                      "s10_school": "Ahmedabad International School",
+                      "board_university": "state"
+                  }
+              ],
+              "std_12": [
+                  {
+                      "s12_marks": 79,
+                      "s12_school": "Nirma University",
+                      "board_university": "state"
+                  }
+              ]
+          }
+      }
+
+      {
+          "s_id": "9",
+          "s_name": "Sneha",
+          "city": "Jaipur",
+          "marks": "91",
+          "misc": {
+              "std_10": [
+                  {
+                      "s10_marks": 88,
+                      "s10_school": "Maharani Gayatri Devi School",
+                      "board_university": "ICSE"
+                  }
+              ],
+              "std_12": [
+                  {
+                      "s12_marks": 90,
+                      "s12_school": "St. Xavier's School",
+                      "board_university": "state"
+                  }
+              ]
+          }
+      }
+
+      {
+          "s_id": "10",
+          "s_name": "Meera",
+          "city": "Bhopal",
+          "marks": "87",
+          "misc": {
+              "std_10": [
+                  {
+                      "s10_marks": 78,
+                      "s10_school": "Kendriya Vidyalaya",
+                      "board_university": "CBSE"
+                  }
+              ],
+              "std_12": [
+                  {
+                      "s12_marks": 85,
+                      "s12_school": "Delhi Public School",
+                      "board_university": "CBSE"
+                  }
+              ]
+          }
+      }
