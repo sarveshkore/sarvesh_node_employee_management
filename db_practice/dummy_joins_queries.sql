@@ -47,3 +47,4 @@ SELECT a.s_id, a.s_name, b.location, c.c_name
 FROM student_data a 
 FULL OUTER JOIN location b ON a.location_id = b.l_id
 FULL OUTER JOIN course c ON a.course = c.c_id order by s_id asc;
+

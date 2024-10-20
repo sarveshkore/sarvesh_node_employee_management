@@ -1,4 +1,6 @@
 module.exports=function(app){
+
+    // MAIN FILE SYSTEM
     app.get('/file_system/read_file_async', function (req, res) {       
     let y=require('../src/file_system/read_file_async');
     
@@ -69,4 +71,16 @@ app.get('/file_system/read_file_sync', function (req, res) {
         y.main(req,res);
        
     })
+
+    // PRACTICE FILE SYSTEM
+
+    app.post('/file_system_practice/prac_write_file_async/',function(req,res){
+        let write_api=require('../src/file_system_practice/prac_write_file_async');
+        write_api.main(req,res);
+    });
+    app.get('/file_system_practice/prac_read_file_async/',function(req,res){
+        let read_api=require('../src/file_system_practice/prac_read_file_async')
+        read_api.main(req,res);
+    });
+
 }
