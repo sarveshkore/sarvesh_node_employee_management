@@ -114,4 +114,17 @@ app.get('/file_system/read_file_sync', function (req, res) {
         let make_dir_file_api=require('../src/file_system_practice/prac_generate_multiple_files_sync');
         make_dir_file_api.main(req,res);
     })
+    app.put('/file_system_practice/prac_append_file_async/',function(req,res){
+        let make_dir_file_api=require('../src/file_system_practice/prac_append_file_async');
+        make_dir_file_api.main(req,res);
+    })
+    app.put('/file_system_practice/prac_append_file_sync/',function(req,res){
+        let make_dir_file_api=require('../src/file_system_practice/prac_append_file_sync');
+        make_dir_file_api.main(req,res);
+    })
+    app.get('/file_system_practice/prac_read_dir_async/',function(req,res){
+        let make_dir_file_api=require('../src/file_system_practice/prac_read_dir_async');
+        make_dir_file_api.main(req,res);
+    })
+
 }

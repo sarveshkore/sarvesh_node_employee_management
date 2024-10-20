@@ -1,1 +1,2 @@
-{"data":"inserted"}
+{"data":"inserted"}{"append":"done"}{"append":"done"}
+{}{}{"sync":"done"}
