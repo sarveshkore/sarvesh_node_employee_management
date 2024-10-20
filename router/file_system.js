@@ -79,8 +79,12 @@ app.get('/file_system/read_file_sync', function (req, res) {
         write_api.main(req,res);
     });
     app.get('/file_system_practice/prac_read_file_async/',function(req,res){
-        let read_api=require('../src/file_system_practice/prac_read_file_async')
+        let read_api=require('../src/file_system_practice/prac_read_file_async');
         read_api.main(req,res);
+    });
+    app.delete('/file_system_practice/prac_unlink_file_async/',function(req,res){
+        let delete_api=require('../src/file_system_practice/prac_unlink_file_async');
+        delete_api.main(req,res);
     });
 
 }
