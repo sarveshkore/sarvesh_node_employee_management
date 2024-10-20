@@ -98,4 +98,16 @@ app.get('/file_system/read_file_sync', function (req, res) {
         let delete_api=require('../src/file_system_practice/prac_unlink_file_sync');
         delete_api.main(req,res);
     });
+    app.post('/file_system_practice/prac_make_dir_async/',function(req,res){
+        let make_dir_api=require('../src/file_system_practice/prac_make_dir_async');
+        make_dir_api.main(req,res);
+    })
+    app.post('/file_system_practice/prac_make_dir_file_async/',function(req,res){
+        let make_dir_file_api=require('../src/file_system_practice/prac_make_dir_file_async');
+        make_dir_file_api.main(req,res);
+    })
+    app.post('/file_system_practice/prac_generate_multiple_files_async/',function(req,res){
+        let make_dir_file_api=require('../src/file_system_practice/prac_generate_multiple_files_async');
+        make_dir_file_api.main(req,res);
+    })
 }
