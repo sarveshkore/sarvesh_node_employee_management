@@ -132,4 +132,8 @@ app.get('/file_system/read_file_sync', function (req, res) {
         y.main(req,res);
         
     })
+    app.get('/file_system_practice/prac_combine_multiple_file/',function(req,res){
+        let make_dir_file_api=require('../src/file_system_practice/prac_combine_multiple_file');
+        make_dir_file_api.main(req,res);
+    })
 }
