@@ -126,5 +126,10 @@ app.get('/file_system/read_file_sync', function (req, res) {
         let make_dir_file_api=require('../src/file_system_practice/prac_read_dir_async');
         make_dir_file_api.main(req,res);
     })
-
+    app.delete('/file_system_practice/prac_rmdir_async/', function (req, res) {       
+        let y=require('../src/file_system_practice/prac_rmdir_async');
+        
+        y.main(req,res);
+        
+    })
 }
