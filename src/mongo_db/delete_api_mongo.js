@@ -12,7 +12,8 @@ async function main(req,res){
 
 
     const collection = db.collection('col_1');
-    await collection.deleteOne({  s_name:'harsh' });
+    // await collection.deleteOne({  s_name:'harsh' });
+    
     console.log('deleted')
     client.close()
 }
