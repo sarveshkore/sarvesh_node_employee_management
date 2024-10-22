@@ -10,9 +10,11 @@ async function main(req,res){
     console.log('Connected successfully to server');
     const db = client.db("sarvesh_db");
     const collection = db.collection('col_1');
-    // const insertResult = await collection.insertMany([{ a: 1 }, { a: 2 }, { a: 3 }]);
-    // await collection.insertMany([{ sarvesh: 1 }, { rupesh: 2 }, { harsh: 3 }]);
-    await collection.updateOne({abhijeet:4},{ $set: { sarvesh: 1 } });
+    let update={location:'kurla'};
+    let updateTo={ $set: {location:'ghatkopar' } }
+    // await collection.updateOne({location:'ghatkopar'},{ $set: {location:'kurla' } });
+    await collection.updateOne(update,updateTo);
+
     console.log('updated ');
 
     client.close()

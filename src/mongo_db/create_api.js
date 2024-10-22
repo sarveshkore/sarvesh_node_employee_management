@@ -1,19 +1,22 @@
 async function main(req,res){
-    console.log('he');
-    
+        
     const { MongoClient } = require('mongodb');
     const url = 'mongodb://localhost:27017';
-    const client = new MongoClient(url);
-
+    const client = new MongoClient(url); 
 
     await client.connect();
     console.log('Connected successfully to server');
     const db = client.db("sarvesh_db");
+    console.log(`db: ${db.databaseName}`);
+
     const collection = db.collection('col_1');
-    // const insertResult = await collection.insertMany([{ a: 1 }, { a: 2 }, { a: 3 }]);
-    // await collection.insertMany([{ sarvesh: 1 }, { rupesh: 2 }, { harsh: 3 }]);
-    await collection.insertOne({abhijeet:4});
-    
+    console.log(`collection : ${collection.collectionName}`);
+
+    let data={name:'sarvesh', location: 'gharkopar'}
+    let created_data= await collection.insertOne(data);
+    console.log(created_data);
+    console.log(data);
+    res.send(data);
 
     client.close()
 }
