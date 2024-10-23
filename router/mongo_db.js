@@ -23,10 +23,10 @@ module.exports=function(app){
         l.main(req,res);
     });
 
-    // app.put("/api/mongo_db_practice/prac_update_api_mongo_updateOne/",function(req,res){
-    //     const update_api = require('/../src/mongo_db_practice/prac_update_api_mongo_updateOne');
-    //     update_api.main(req,res);
-    // });
+    app.get("/api/mongo_db_practice/prac_read_api_mongo_find/",function(req,res){
+        const update_api = require('../src/mongo_db_practice/prac_read_api_mongo_find');
+        update_api.main(req,res);
+    });
     app.put("/api/mongo_db_practice/prac_update_api_mongo_updateOne/", function(req, res) {
         const l = require('../src/mongo_db_practice/prac_update_api_mongo_updateOne');
         l.main(req, res);
