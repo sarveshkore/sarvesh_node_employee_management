@@ -18,22 +18,36 @@ module.exports=function(app){
     }) 
 
         //PRACTICE API
-    app.post('/api/mongo_db_practice/prac_create_api_mongo_insertOne/',(req,res)=>{
-        const l=require('../src/mongo_db_practice/prac_create_api_mongo_insertOne');
+    app.post('/api/mongo_db_practice/prac_create_insertOne/',(req,res)=>{
+        const l=require('../src/mongo_db_practice/prac_create_insertOne');
         l.main(req,res);
     });
 
-    app.get("/api/mongo_db_practice/prac_read_api_mongo_find/",function(req,res){
-        const update_api = require('../src/mongo_db_practice/prac_read_api_mongo_find');
+    app.get("/api/mongo_db_practice/prac_read_find/",function(req,res){
+        const update_api = require('../src/mongo_db_practice/prac_read_find');
         update_api.main(req,res);
     });
-    app.put("/api/mongo_db_practice/prac_update_api_mongo_updateOne/", function(req, res) {
-        const l = require('../src/mongo_db_practice/prac_update_api_mongo_updateOne');
+    app.put("/api/mongo_db_practice/prac_update_updateOne/", function(req, res) {
+        const l = require('../src/mongo_db_practice/prac_update_updateOne');
         l.main(req, res);
     });
     
-    app.delete('/api/mongo_db_practice/prac_delete_api_mongo_deleteOne/',(req,res)=>{
-        const l=require('../src/mongo_db_practice/prac_delete_api_mongo_deleteOne');
+    app.delete('/api/mongo_db_practice/prac_delete_deleteOne/',(req,res)=>{
+        const l=require('../src/mongo_db_practice/prac_delete_deleteOne');
         l.main(req,res);
+    });
+
+    app.post('/api/mongo_db_practice/prac_create_insertMany/',(req,res)=>{
+        const l=require('../src/mongo_db_practice/prac_create_insertMany');
+        l.main(req,res);
+    });
+
+    app.delete('/api/mongo_db_practice/prac_delete_deleteMany/',(req,res)=>{
+        const l=require('../src/mongo_db_practice/prac_delete_deleteMany');
+        l.main(req,res);
+    });
+    app.put("/api/mongo_db_practice/prac_update_updateMany/", function(req, res) {
+        const l = require('../src/mongo_db_practice/prac_update_updateMany');
+        l.main(req, res);
     });
 }
