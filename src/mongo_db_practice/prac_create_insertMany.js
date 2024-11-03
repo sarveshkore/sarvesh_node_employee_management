@@ -11,8 +11,7 @@ async function main(req,res){
     const collection = db.collection('collection_practice');
 
     // code for insert many in one document itself uses insert one nesting.
-    // await collection.insertOne(
-    //     student_detail : [
+
         await collection.insertOne({
             student_detail: [
             {

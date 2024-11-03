@@ -9,7 +9,7 @@ async function main(req,res){
     const db = client.db("sarvesh_db");
     const collection = db.collection('collection_practice');
 
-    let data=await collection.find({name:'rupesh'}).toArray();
+    let data = await collection.find({ 'student_deatil.0': [] }).toArray();
     console.log(data)
 }
 module.exports={

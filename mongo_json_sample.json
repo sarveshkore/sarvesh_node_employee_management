@@ -1,0 +1,289 @@
+{
+    "_id" : "guide_9361415e21a9fc95af919640490202e20805973aef137a4f9518d51a32bbb543_creator_1651363200",
+    "startTimestamp" : 1651363200,
+    "endTimestamp" : 1651390200,
+    "lastEventTimestamp" : 1651391059,
+    "documentType" : "guide",
+    "entityType" : "guide",
+    "attribute3" : [ 
+        "creator"
+    ],
+    "attribute5" : [ 
+        38294
+    ],
+    "orgID" : 569,
+    "appCode" : "18E29756-86C7-EC11-997E-14CB654C0D34",
+    "uniqueEntityCode" : "9361415e21a9fc95af919640490202e20805973aef137a4f9518d51a32bbb543",
+    "entityDisplayText" : "insights guide 2",
+    "entityDisplaySubText" : "",
+    "aggregatedLogs" : [ 
+        "1651382346-9d30b024364ae17a8ac79f96a64bfcf0-97441382-1", 
+        "1651382346-9d30b024364ae17a8ac79f96a64bfcf0-97441382-3", 
+        "1651382346-9d30b024364ae17a8ac79f96a64bfcf0-97441382-2", 
+        "1651382702-2f1a5e424bfd666cced4a991bdd875d0-11051434", 
+        "1651382821-f0a83b9c8f73ab1734a311fdb3bb87c3-27518609"
+    ],
+    "events" : [ 
+        {
+            "maxTime" : 997,
+            "minTime" : 4,
+            "totalTime" : 1784,
+            "playedBy" : [ 
+                "ashley+insights@edcast.com"
+            ],
+            "playedByCount" : 1,
+            "guideOpen" : 0,
+            "guideComplete" : 19,
+            "guidePlay" : 19,
+            "guidePlayedViaBeacon" : 19,
+            "guidePlayedViaPush" : 0,
+            "guidePlayedViaPanel" : 0,
+            "guidePlayedViaUrl" : 0
+        }
+    ],
+    "breakdown" : [ 
+        {
+            "startTimestamp" : 1651381200,
+            "maxTime" : 20,
+            "minTime" : 4,
+            "totalTime" : 52,
+            "playedBy" : [ 
+                "ashley+insights@edcast.com"
+            ],
+            "playedByCount" : 1,
+            "guideOpen" : 0,
+            "guideComplete" : 5,
+            "guidePlay" : 5,
+            "guidePlayedViaBeacon" : 5,
+            "guidePlayedViaPush" : 0,
+            "guidePlayedViaPanel" : 0,
+            "guidePlayedViaUrl" : 0
+        }, 
+        {
+            "startTimestamp" : 1651383000,
+            "maxTime" : 997,
+            "minTime" : 8,
+            "totalTime" : 1038,
+            "playedBy" : [ 
+                "ashley+insights@edcast.com"
+            ],
+            "playedByCount" : 1,
+            "guideOpen" : 0,
+            "guideComplete" : 3,
+            "guidePlay" : 3,
+            "guidePlayedViaBeacon" : 3,
+            "guidePlayedViaPush" : 0,
+            "guidePlayedViaPanel" : 0,
+            "guidePlayedViaUrl" : 0
+        }, 
+        {
+            "startTimestamp" : 1651386600,
+            "maxTime" : 26,
+            "minTime" : 6,
+            "totalTime" : 76,
+            "playedBy" : [ 
+                "ashley+insights@edcast.com"
+            ],
+            "playedByCount" : 1,
+            "guideOpen" : 0,
+            "guideComplete" : 6,
+            "guidePlay" : 6,
+            "guidePlayedViaBeacon" : 6,
+            "guidePlayedViaPush" : 0,
+            "guidePlayedViaPanel" : 0,
+            "guidePlayedViaUrl" : 0
+        }, 
+        {
+            "startTimestamp" : 1651388400,
+            "maxTime" : 518,
+            "minTime" : 10,
+            "totalTime" : 528,
+            "playedBy" : [ 
+                "ashley+insights@edcast.com"
+            ],
+            "playedByCount" : 1,
+            "guideOpen" : 0,
+            "guideComplete" : 2,
+            "guidePlay" : 2,
+            "guidePlayedViaBeacon" : 2,
+            "guidePlayedViaPush" : 0,
+            "guidePlayedViaPanel" : 0,
+            "guidePlayedViaUrl" : 0
+        }, 
+        {
+            "startTimestamp" : 1651390200,
+            "maxTime" : 38,
+            "minTime" : 18,
+            "totalTime" : 90,
+            "playedBy" : [ 
+                "ashley+insights@edcast.com"
+            ],
+            "playedByCount" : 1,
+            "guideOpen" : 0,
+            "guideComplete" : 3,
+            "guidePlay" : 3,
+            "guidePlayedViaBeacon" : 3,
+            "guidePlayedViaPush" : 0,
+            "guidePlayedViaPanel" : 0,
+            "guidePlayedViaUrl" : 0
+        }
+    ],
+    "stepsDetails" : [ 
+        {
+            "stepID" : 114718,
+            "stepName" : "Click on \"Google Search\"",
+            "stepIndex" : 1,
+            "stepType" : "inline",
+            "isDeleted" : false,
+            "stepsSuccession" : [ 
+                {
+                    "startTimestamp" : 1651381200,
+                    "count" : 5,
+                    "maxTime" : 0,
+                    "minTime" : 0,
+                    "totalTime" : 0,
+                    "playSequenceID" : [ 
+                        "551fcd2c-b7b2-4190-bda3-8dd7626f82e1", 
+                        "f66b4c44-49b1-495e-91f6-ee303a3496ee", 
+                        "0c418394-a6e0-4bbe-84ed-4fcbd59d3bc7", 
+                        "5b1ec54e-5b4d-481d-8f08-816c85f5da18", 
+                        "bed5341a-a5ad-409e-8bbf-683889e904ed"
+                    ],
+                    "stepErrorSequenceID" : []
+                }, 
+                {
+                    "startTimestamp" : 1651383000,
+                    "count" : 3,
+                    "maxTime" : 982,
+                    "minTime" : 0,
+                    "totalTime" : 982,
+                    "playSequenceID" : [ 
+                        "6b0e757d-2ad6-46b9-b4c5-48d016b005cc", 
+                        "d4d0f20b-5326-44af-9e0e-9029ad7d0ecc", 
+                        "2286072c-6791-4610-a9aa-858c8bd121e9"
+                    ],
+                    "stepErrorSequenceID" : []
+                }, 
+                {
+                    "startTimestamp" : 1651386600,
+                    "count" : 6,
+                    "maxTime" : 0,
+                    "minTime" : 0,
+                    "totalTime" : 0,
+                    "playSequenceID" : [ 
+                        "6124a61a-b471-4221-b95b-a44fa9907dee", 
+                        "25cb0aca-2291-48f1-a9ec-faa379709f93", 
+                        "abc9b684-2418-47b0-8d11-478f81ebc60d", 
+                        "e0ef55e2-113f-4d9e-836d-4938b24c6080", 
+                        "8e48a2bd-3a44-4d41-bb58-2c91bec9d713", 
+                        "39a7fee7-9049-4b7d-9f2a-d71539648518"
+                    ],
+                    "stepErrorSequenceID" : []
+                }, 
+                {
+                    "startTimestamp" : 1651388400,
+                    "count" : 2,
+                    "maxTime" : 468,
+                    "minTime" : 0,
+                    "totalTime" : 468,
+                    "playSequenceID" : [ 
+                        "bf82a5dd-c77b-4861-86aa-69cd91b4822f", 
+                        "afa8d23f-fdb2-46bd-9d1c-39d77a89f6d6"
+                    ],
+                    "stepErrorSequenceID" : []
+                }, 
+                {
+                    "startTimestamp" : 1651390200,
+                    "count" : 3,
+                    "maxTime" : 0,
+                    "minTime" : 0,
+                    "totalTime" : 0,
+                    "playSequenceID" : [ 
+                        "de50edb3-ce10-4b3e-ab3c-9ca221a68dfb", 
+                        "5735fdd5-aef2-4c1f-bafb-3a97a35ea8dc", 
+                        "ba24a006-03b6-497a-9349-f1ad5b587762"
+                    ],
+                    "stepErrorSequenceID" : []
+                }
+            ]
+        }, 
+        {
+            "stepID" : 114719,
+            "stepName" : "<p>click on google icon</p>",
+            "stepIndex" : 2,
+            "stepType" : "inline",
+            "isDeleted" : false,
+            "stepsSuccession" : [ 
+                {
+                    "startTimestamp" : 1651381200,
+                    "count" : 5,
+                    "maxTime" : 20,
+                    "minTime" : 4,
+                    "totalTime" : 52,
+                    "playSequenceID" : [ 
+                        "551fcd2c-b7b2-4190-bda3-8dd7626f82e1", 
+                        "f66b4c44-49b1-495e-91f6-ee303a3496ee", 
+                        "0c418394-a6e0-4bbe-84ed-4fcbd59d3bc7", 
+                        "5b1ec54e-5b4d-481d-8f08-816c85f5da18", 
+                        "bed5341a-a5ad-409e-8bbf-683889e904ed"
+                    ],
+                    "stepErrorSequenceID" : []
+                }, 
+                {
+                    "startTimestamp" : 1651383000,
+                    "count" : 3,
+                    "maxTime" : 997,
+                    "minTime" : 8,
+                    "totalTime" : 1038,
+                    "playSequenceID" : [ 
+                        "6b0e757d-2ad6-46b9-b4c5-48d016b005cc", 
+                        "d4d0f20b-5326-44af-9e0e-9029ad7d0ecc", 
+                        "2286072c-6791-4610-a9aa-858c8bd121e9"
+                    ],
+                    "stepErrorSequenceID" : []
+                }, 
+                {
+                    "startTimestamp" : 1651386600,
+                    "count" : 6,
+                    "maxTime" : 26,
+                    "minTime" : 6,
+                    "totalTime" : 76,
+                    "playSequenceID" : [ 
+                        "6124a61a-b471-4221-b95b-a44fa9907dee", 
+                        "25cb0aca-2291-48f1-a9ec-faa379709f93", 
+                        "abc9b684-2418-47b0-8d11-478f81ebc60d", 
+                        "e0ef55e2-113f-4d9e-836d-4938b24c6080", 
+                        "8e48a2bd-3a44-4d41-bb58-2c91bec9d713", 
+                        "39a7fee7-9049-4b7d-9f2a-d71539648518"
+                    ],
+                    "stepErrorSequenceID" : []
+                }, 
+                {
+                    "startTimestamp" : 1651388400,
+                    "count" : 2,
+                    "maxTime" : 518,
+                    "minTime" : 10,
+                    "totalTime" : 528,
+                    "playSequenceID" : [ 
+                        "bf82a5dd-c77b-4861-86aa-69cd91b4822f", 
+                        "afa8d23f-fdb2-46bd-9d1c-39d77a89f6d6"
+                    ],
+                    "stepErrorSequenceID" : []
+                }, 
+                {
+                    "startTimestamp" : 1651390200,
+                    "count" : 3,
+                    "maxTime" : 38,
+                    "minTime" : 18,
+                    "totalTime" : 90,
+                    "playSequenceID" : [ 
+                        "de50edb3-ce10-4b3e-ab3c-9ca221a68dfb", 
+                        "5735fdd5-aef2-4c1f-bafb-3a97a35ea8dc", 
+                        "ba24a006-03b6-497a-9349-f1ad5b587762"
+                    ],
+                    "stepErrorSequenceID" : []
+                }
+            ]
+        }
+    ]
+}

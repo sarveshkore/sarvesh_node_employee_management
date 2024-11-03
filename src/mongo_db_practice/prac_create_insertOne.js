@@ -9,10 +9,8 @@ async function main(req,res){
     const db = client.db("sarvesh_db");
     const collection = db.collection('collection_practice');
 
-    // await collection.insertOne({name:'sarvesh'});
-    // await collection.insertMany([{ "a": 1 }, { "a": 2 }, { "a": 3 }]);
-    // await collection.insertMany([{ c: 'he bro' }]);
-    await collection.updateOne({ "_id" : ObjectId("671b9daa17bfba26551786b5") }, { $set: { f:10 } }); 
+    await collection.insertOne({name:'new_data'});
+
     console.log('done');
     
 
