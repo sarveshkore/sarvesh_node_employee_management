@@ -9,7 +9,9 @@ async function main(req,res){
     const db = client.db("sarvesh_db");
     const collection = db.collection('collection_practice');
 
-    await collection.insertOne({name:'new_data'});
+    // await collection.insertOne({name:'new_data'});
+    const data=req.body;
+    const result = await collection.insertOne(data);
 
     console.log('done');
     
