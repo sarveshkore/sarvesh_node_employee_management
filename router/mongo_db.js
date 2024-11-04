@@ -50,4 +50,10 @@ module.exports=function(app){
         const l = require('../src/mongo_db_practice/prac_update_updateMany');
         l.main(req, res);
     });
+
+    //aggregate functions
+    app.get("/api/mongo_db_practice/prac_aggregation_function/",function(req,res){
+        const update_api = require('../src/mongo_db_practice/prac_aggregation_function');
+        update_api.main(req,res);
+    });
 }
