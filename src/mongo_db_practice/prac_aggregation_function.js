@@ -14,23 +14,18 @@ async function main(req,res){
         {
             $skip:1,
         },
+        {$unwind:'$academicDetails.courses'},
         {
             $project: {
                 '_id':0,
                 f_name:'$personalInfo.firstName',
                 l_name:'$personalInfo.lastName',
-                pointer:'$academicDetails.GPA',   //change academicDetails.GPA to pointer
-                // courseourseGrade: { $arrayElemAt: ["$academicDetails.courses.grade", 0] },
-                total_marks:{$sum:'$academicDetails.courses.marks'},
-                percentage: {
-                    $multiply: [
-                        { $divide: [{ $sum: '$academicDetails.courses.marks' }, 400] },
-                        100
-                        
-                    ]
-                } 
+                courseName:'$academicDetails.courses.courseName',
+                marks:'$academicDetails.courses.marks'
+                
             }
-        }
+        },
+
     ]).toArray();
 
     console.log(agg);
