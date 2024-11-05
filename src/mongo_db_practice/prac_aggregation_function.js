@@ -82,24 +82,45 @@ async function main(req,res){
         // }
         
                     //count of A grade in document
-        {
-            $unwind:'$academicDetails.courses'
-        },
-        {
-            $match: { 'academicDetails.courses.grade': { $in: ['A'] } }
-        },
-        {
-            $project:{
-                _id:0,
-                firstName:'$personalInfo.firstName',
-                lastName:'$personalInfo.lastName',
-                courseName:'$academicDetails.courses.courseName',
-                grade:'$academicDetails.courses.grade',
+        // {
+        //     $unwind:'$academicDetails.courses'
+        // },
+        // {
+        //     $match: { 'academicDetails.courses.grade': { $in: ['A'] } }
+        // },
+        // {
+        //     $project:{
+        //         _id:0,
+        //         firstName:'$personalInfo.firstName',
+        //         lastName:'$personalInfo.lastName',
+        //         courseName:'$academicDetails.courses.courseName',
+        //         grade:'$academicDetails.courses.grade',
 
-            }
+        //     }
+        // },
+        // {
+        //     $count:'A'
+        // }
+
+                        //student wise count of A grade in documents
+        {
+            $unwind: '$academicDetails.courses'
         },
         {
-            $count:'A'
+            $match: { 'academicDetails.courses.grade': 'A' }  // Filter for grade "A"
+        },
+        {
+            $group: {
+                _id: '$personalInfo.firstName',  // Group by first name
+                a_count: { $sum: 1 }  // Count the occurrences of "A"
+            },
+        },
+        {
+            $project: {
+                _id: 0,
+                firstName: '$_id',  // Include the first name in the output
+                A_grade: '$a_count'    // Rename the count field
+            }
         }
 
         
