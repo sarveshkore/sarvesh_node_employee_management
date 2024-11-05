@@ -27,10 +27,26 @@ async function main(req,res){
         },
         {
             $group:{
-                _id:'$f_name',
+                _id: {
+                    f_name: '$f_name', // Group by first name
+                    l_name: '$l_name'  // Include last name in the group
+                },
                 total_marks:{$sum:'$marks'}
             }
+        },
+        {
+            $project: {
+                _id: 0, 
+                f_name: '$_id.f_name', // Include the first name from the grouped _id
+                l_name: '$_id.l_name', // Include the last name from the grouped _id
+                total_marks: '$total_marks' ,
+                percentage: {
+                    $multiply: [ { $divide: ['$total_marks', 400] }, 100 ]
+                }
+            }
         }
+
+
         
     ]).toArray();
 
