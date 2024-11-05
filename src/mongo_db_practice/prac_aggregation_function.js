@@ -25,7 +25,13 @@ async function main(req,res){
                 
             }
         },
-
+        // {
+        //     $group:{
+        //         _id:'$f_name',
+        //         total_marks:{$sum:'$marks'}
+        //     }
+        // }
+        
     ]).toArray();
 
     console.log(agg);
