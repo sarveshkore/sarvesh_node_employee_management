@@ -15,7 +15,7 @@ async function main(req,res){
             $skip:1,
         },
 
-        //get all student f_name, l_name, total_marks, percentage 
+                    //get all student f_name, l_name, total_marks, percentage 
         // {$unwind:'$academicDetails.courses'},
         // {
         //     $project: {
@@ -48,38 +48,60 @@ async function main(req,res){
         //     }
         // }
 
-        //largest percentage in group
+                    //largest percentage in group
+        // {
+        //     $unwind: '$academicDetails.courses' 
+        // },
+        // {
+        //     $group: {
+        //         _id: {
+        //             f_name: '$personalInfo.firstName', 
+        //             l_name: '$personalInfo.lastName'    
+        //         },
+        //         total_marks: { $sum: '$academicDetails.courses.marks' }, 
+        //         maxMarks:{$max:'$academicDetails.courses.marks'}
+        //     }
+        // },
+        // {
+        //     $project: {
+        //         _id: 0, 
+        //         f_name: '$_id.f_name', 
+        //         l_name: '$_id.l_name', 
+        //         total_marks: '$total_marks', 
+        //         maxMarks:'$maxMarks',
+        //         percentage: {
+        //             $multiply: [{ $divide: ['$total_marks', 400] }, 100] 
+        //         }
+        //     }
+        // },
+        // {
+        //     $sort: { percentage: -1 }
+        // },
+        // {
+        //     $limit:1,
+        // }
+        
+                    //count of A grade in document
         {
-            $unwind: '$academicDetails.courses' // Flatten the courses array
+            $unwind:'$academicDetails.courses'
         },
         {
-            $group: {
-                _id: {
-                    f_name: '$personalInfo.firstName', // Group by first name
-                    l_name: '$personalInfo.lastName'    // Group by last name
-                },
-                total_marks: { $sum: '$academicDetails.courses.marks' } // Sum the marks
-            }
+            $match: { 'academicDetails.courses.grade': { $in: ['A'] } }
         },
         {
-            $project: {
-                _id: 0, // Exclude the _id field
-                f_name: '$_id.f_name', // Include first name
-                l_name: '$_id.l_name', // Include last name
-                total_marks: '$total_marks', // Include total_marks
-                percentage: {
-                    $multiply: [{ $divide: ['$total_marks', 400] }, 100] // Calculate percentage
-                }
-            }
-        },
-        {
-            // $sort: { percentage: 1 }//ASCENDING ORDER
-            $sort: { percentage: -1 }//DESCENDING ORDER
+            $project:{
+                _id:0,
+                firstName:'$personalInfo.firstName',
+                lastName:'$personalInfo.lastName',
+                courseName:'$academicDetails.courses.courseName',
+                grade:'$academicDetails.courses.grade',
 
+            }
         },
         {
-            $limit:1,
+            $count:'A'
         }
+
         
     ]).toArray();
 
