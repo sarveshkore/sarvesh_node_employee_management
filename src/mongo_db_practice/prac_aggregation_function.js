@@ -26,8 +26,9 @@ async function main(req,res){
                     $multiply: [
                         { $divide: [{ $sum: '$academicDetails.courses.marks' }, 400] },
                         100
+                        
                     ]
-                }
+                } 
             }
         }
     ]).toArray();
