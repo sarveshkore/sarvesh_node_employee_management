@@ -103,27 +103,50 @@ async function main(req,res){
         // }
 
                         //student wise count of A grade in documents
-        {
-            $unwind: '$academicDetails.courses'
+        // {
+        //     $unwind: '$academicDetails.courses'
+        // },
+        // {
+        //     $match: { 'academicDetails.courses.grade': 'A' }  // Filter for grade "A"
+        // },
+        // {
+        //     $group: {
+        //         _id: '$personalInfo.firstName',  // Group by first name
+        //         a_count: { $sum: 1 }  // Count the occurrences of "A"
+        //     },
+        // },
+        // {
+        //     $project: {
+        //         _id: 0,
+        //         firstName: '$_id',  // Include the first name in the output
+        //         A_grade: '$a_count'    // Rename the count field
+        //     }
+        // }
+
+                    //find sum of fianancial aid to students
+        {    
+            $unwind:'$financialAid.loans',
         },
         {
-            $match: { 'academicDetails.courses.grade': 'A' }  // Filter for grade "A"
+            $project:{
+                _id:0,
+                name:'$personalInfo.firstName',
+                loan_amount:'$financialAid.loans.amount'
+            }
         },
         {
-            $group: {
-                _id: '$personalInfo.firstName',  // Group by first name
-                a_count: { $sum: 1 }  // Count the occurrences of "A"
-            },
+            $group:{
+                _id:0,
+                loanAmount:{$sum:'$loan_amount'}
+            }
         },
         {
-            $project: {
-                _id: 0,
-                firstName: '$_id',  // Include the first name in the output
-                A_grade: '$a_count'    // Rename the count field
+            $project:{
+                _id:'$name',
+                'Total Loan Amount': '$loanAmount'
             }
         }
 
-        
     ]).toArray();
 
     console.log(agg);
