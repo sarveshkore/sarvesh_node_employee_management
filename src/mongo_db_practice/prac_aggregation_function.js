@@ -124,29 +124,51 @@ async function main(req,res){
         // }
 
                     //find sum of fianancial aid to students
-        {    
-            $unwind:'$financialAid.loans',
+        // {    
+        //     $unwind:'$financialAid.loans',
+        // },
+        // {
+        //     $project:{
+        //         _id:0,
+        //         name:'$personalInfo.firstName',
+        //         loan_amount:'$financialAid.loans.amount'
+        //     }
+        // },
+        // {
+        //     $group:{
+        //         _id:0,
+        //         loanAmount:{$sum:'$loan_amount'}
+        //     }
+        // },
+        // {
+        //     $project:{
+        //         _id:'$name',
+        //         'Total Loan Amount': '$loanAmount'
+        //     }
+        // }
+
+        //  count of activities per student
+        {
+            $unwind: '$extracurricularActivities'
         },
         {
-            $project:{
-                _id:0,
-                name:'$personalInfo.firstName',
-                loan_amount:'$financialAid.loans.amount'
+            $group: {
+                _id: '$personalInfo.firstName', // Group by each student's name
+                totalActivities: { $sum: 1 }    // Count each activity
             }
         },
         {
-            $group:{
-                _id:0,
-                loanAmount:{$sum:'$loan_amount'}
-            }
-        },
-        {
-            $project:{
-                _id:'$name',
-                'Total Loan Amount': '$loanAmount'
+            $project: {
+                _id: 0,
+                name: '$_id',
+                'Total Activities': '$totalActivities' // Rename the field to "Total Activities"
             }
         }
 
+
+        
+
+        
     ]).toArray();
 
     console.log(agg);
