@@ -147,21 +147,39 @@ async function main(req,res){
         //     }
         // }
 
-        //  count of activities per student
+                //  count of activities per student
+        // {
+        //     $unwind: '$extracurricularActivities'
+        // },
+        // {
+        //     $group: {
+        //         _id: '$personalInfo.firstName', // Group by each student's name
+        //         totalActivities: { $sum: 1 }    // Count each activity
+        //     }
+        // },
+        // {
+        //     $project: {
+        //         _id: 0,
+        //         name: '$_id',
+        //         'Total Activities': '$totalActivities' // Rename the field to "Total Activities"
+        //     }
+        // }
+
+                // scholarship amount per student
         {
-            $unwind: '$extracurricularActivities'
+            $unwind:'$financialAid.scholarships'
         },
         {
-            $group: {
-                _id: '$personalInfo.firstName', // Group by each student's name
-                totalActivities: { $sum: 1 }    // Count each activity
+            $group:{
+                _id:'$personalInfo.firstName',
+                scholarship_amount:{$sum : '$financialAid.scholarships.amount'}
             }
         },
         {
-            $project: {
-                _id: 0,
-                name: '$_id',
-                'Total Activities': '$totalActivities' // Rename the field to "Total Activities"
+            $project:{
+                _id:0,
+                name:'$_id',
+                'Total Scholarship Amount': '$scholarship_amount'
             }
         }
 
