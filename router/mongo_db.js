@@ -56,4 +56,10 @@ module.exports=function(app){
         const update_api = require('../src/mongo_db_practice/prac_aggregation_function');
         update_api.main(req,res);
     });
+
+
+    app.get("/api/api_internal_communication/call_other_api/",function(req,res){
+        const update_api = require('../src/api_internal_communication/call_other_api');
+        update_api.main(req,res);
+    });
 }

@@ -14,6 +14,11 @@ async function main(req,res){
         {
             $skip:1,
         },
+        // {
+        //     $project:{
+        //         _id:0
+        //     }
+        // }
 
                     //get all student f_name, l_name, total_marks, percentage 
         // {$unwind:'$academicDetails.courses'},
@@ -166,22 +171,22 @@ async function main(req,res){
         // }
 
                 // scholarship amount per student
-        {
-            $unwind:'$financialAid.scholarships'
-        },
-        {
-            $group:{
-                _id:'$personalInfo.firstName',
-                scholarship_amount:{$sum : '$financialAid.scholarships.amount'}
-            }
-        },
-        {
-            $project:{
-                _id:0,
-                name:'$_id',
-                'Total Scholarship Amount': '$scholarship_amount'
-            }
-        }
+        // {
+        //     $unwind:'$financialAid.scholarships'
+        // },
+        // {
+        //     $group:{
+        //         _id:'$personalInfo.firstName',
+        //         scholarship_amount:{$sum : '$financialAid.scholarships.amount'}
+        //     }
+        // },
+        // {
+        //     $project:{
+        //         _id:0,
+        //         name:'$_id',
+        //         'Total Scholarship Amount': '$scholarship_amount'
+        //     }
+        // }
 
 
         
@@ -189,7 +194,7 @@ async function main(req,res){
         
     ]).toArray();
 
-    console.log(agg);
+    console.log('hello');
     res.send(agg)
 }
 module.exports={

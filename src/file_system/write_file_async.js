@@ -1,10 +1,34 @@
+// function main(req,res){
+//     const fs=require('fs');
+
+//     let data=req.body;
+//     console.log(data);
+    
+//     fs.writeFile('demo.txt',JSON.stringify(data),(err)=>{
+//         // console.log(err);
+//         if(err){
+//             res.send("Error");
+//         }
+//         else{
+
+//             // console.log("done");
+//             res.send("done");
+//         }
+//     });
+    
+// }
+// module.exports={
+//     main:main
+// }
+
+
 function main(req,res){
     const fs=require('fs');
 
-    let data=req.body;
-    console.log(data);
+    // let data=req.body;
+    // console.log(data);
     
-    fs.writeFile('demo.txt',JSON.stringify(data),(err)=>{
+    fs.writeFile('demo.txt','hello',(err)=>{
         // console.log(err);
         if(err){
             res.send("Error");
