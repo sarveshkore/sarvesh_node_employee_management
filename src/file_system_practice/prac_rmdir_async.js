@@ -1,9 +1,8 @@
 function main(req,res){
     const fs=require('fs');
-    let folder=req.query.folder;
-    fs.rmdir(folder,{recursive:true,force:true},(err)=>{
+    fs.rmdir('fs_practice',{recursive:true,force:true},(err)=>{
         console.log(err || 'folder deleted');
-        res.send(err || `Folder deleted: ${folder}`);
+        res.send(`Folder deleted: `);
     })
 }
 module.exports={

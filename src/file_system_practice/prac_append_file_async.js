@@ -1,7 +1,7 @@
 function main(req,res){
     const fs=require('fs');
     let data=req.body;
-    fs.appendFile('file.txt',JSON.stringify(data).split(",")+"\n",()=>{
+    fs.appendFile('data_async.txt',JSON.stringify(data).split(",")+"\n",()=>{
         console.log(data);
     })
     console.log('Data appended:', data);

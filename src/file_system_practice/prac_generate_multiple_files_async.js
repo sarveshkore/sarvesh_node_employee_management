@@ -7,12 +7,10 @@ function main(req,res){
     fs.mkdir(folder,{recursive:true},()=>{
         console.log(`folder created : ${folder}`);
         for(let i=1;i<=n;i++){
-            data["index"] = i;
-            // fs.writeFile(folder+'/'+file+`_${i}`+'.txt',JSON.stringify(data),()=>{
+                data["index"] = i;
                 fs.writeFile(`${folder}/${file}_${i}.txt`,JSON.stringify(data),()=>{
-
                 console.log(`file created ${file}`);
-                console.log('data inserted :',data);
+                console.log('data inserted :',{data});
             })
         }
         res.send(`folder created : ${folder}, file created : ${file}`);

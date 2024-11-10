@@ -12,7 +12,7 @@ function main(req,res){
         console.log(`file created : ${file}_${i} in folder ${folder}`);
         console.log(`data inserted : ${data}`);
     }
-    res.send(`${folder},${file} created `);
+    res.send(`${folder},${file} created`);
 }
 module.exports={
     main:main

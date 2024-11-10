@@ -1,7 +1,7 @@
 function main(req,res){
     const fs=require("fs");
     let data=req.body;
-    fs.writeFile("f1_created.txt", JSON.stringify(data), (err) => {
+    fs.writeFile("data_async.txt", JSON.stringify(data), (err) => {
         if (err) {
             console.log("Error writing file", err);
             res.status(500).send("Error writing file");
