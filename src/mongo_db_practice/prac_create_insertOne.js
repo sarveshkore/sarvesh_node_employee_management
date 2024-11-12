@@ -45,7 +45,7 @@ async function main(req, res) {
             institute:["Indian Institute of Technology Bombay","Indian Institute of Technology Delhi","Indian Institute of Technology Madras","Indian Institute of Technology Kanpur","Indian Institute of Technology Kharagpur"],
             credit:["4","5"],
             grade:["O","A","A","B",+"B"],
-            extracurricular_year:["2021","2022","2023"],
+            extracurricular_year:["2021","2022","2023","2024","2024"],
             semester:["1","2","3","4","5","6"],
             courseSem:["1","2","3","4","5","6"],
             awards :["Best Software Development Project","Outstanding Academic Achievement in Computer Science","Excellence in Artificial Intelligence Research","Top Innovator in Machine Learning","Best Capstone Project in IT"],
