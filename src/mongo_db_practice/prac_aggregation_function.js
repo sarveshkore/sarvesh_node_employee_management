@@ -11,9 +11,9 @@ async function main(req,res){
     const collection = db.collection('collection_practice');
 
     const agg= await collection.aggregate([
-        {
-            $skip:1,
-        },
+        // {
+        //     $skip:1,
+        // },
         // {
         //     $project:{
         //         _id:0
@@ -80,7 +80,7 @@ async function main(req,res){
         //     }
         // },
         // {
-        //     $sort: { percentage: -1 }
+        //     $sort: { percentage: 1 }
         // },
         // {
         //     $limit:1,
@@ -171,22 +171,22 @@ async function main(req,res){
         // }
 
                 // scholarship amount per student
-        // {
-        //     $unwind:'$financialAid.scholarships'
-        // },
-        // {
-        //     $group:{
-        //         _id:'$personalInfo.firstName',
-        //         scholarship_amount:{$sum : '$financialAid.scholarships.amount'}
-        //     }
-        // },
-        // {
-        //     $project:{
-        //         _id:0,
-        //         name:'$_id',
-        //         'Total Scholarship Amount': '$scholarship_amount'
-        //     }
-        // }
+        {
+            $unwind:'$financialAid.scholarships'
+        },
+        {
+            $group:{
+                _id:'$personalInfo.firstName',
+                scholarship_amount:{$sum : '$financialAid.scholarships.amount'}
+            }
+        },
+        {
+            $project:{
+                _id:0,
+                name:'$_id',
+                'Total Scholarship Amount': '$scholarship_amount'
+            }
+        }
 
 
         
