@@ -23,8 +23,6 @@ main();
 module.exports={
     main
 }
-// https://www.npmjs.com/package/pg
-// to check the port go to database and there go to proties of postgres7 and to properties from there > connection
 
 
 

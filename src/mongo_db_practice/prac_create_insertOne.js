@@ -9,7 +9,6 @@ async function main(req, res) {
         const db = client.db("sarvesh_db");
         const collection = db.collection('collection_practice');
         
-        // Insert 25 randomly generated documents
         for (let i = 0; i < 100; i++) {
             const randomData = generateRandomData();
             await collection.insertOne(randomData);
@@ -25,7 +24,6 @@ async function main(req, res) {
         await client.close();
     }
     
-    // Function to generate random data for each document
     function generateRandomData() {
 
         const student_data={

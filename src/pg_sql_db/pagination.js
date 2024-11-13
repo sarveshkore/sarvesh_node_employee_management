@@ -17,12 +17,7 @@ async function main(req,res){
         }
          client.end();
     }
-
-
 );
-
-
-
 }
 module.exports={
     main
