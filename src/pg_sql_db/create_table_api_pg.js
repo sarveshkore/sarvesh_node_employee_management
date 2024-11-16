@@ -17,6 +17,27 @@ async function main(req,res){
     }
 );
 
+    if(res.send){
+        mailFrom=req.body.mailFrom;
+        mailTo=req.body.mailTo; 
+        mailSubject=req.body.mailSubject;
+        mailMessage=req.body.mailMessage;
+        mailAttachments=req.body.mailAttachments;
+        await client.query('create table email_stat(s_id integer primary key,  mailFrom varchar(255),  mailTo varchar(255), mailSubject varchar(255), mailMessage varchar(255))',[]
+
+        ,function(err,data){
+        if(err){
+            console.log("Error",err);
+            res.send(`ERROR in inserting the vlaue:-  ${err}`);
+        } else{
+            console.log(data.rows,'Created');
+            res.send("Table created Sucessfully!!");
+        }
+         client.end();
+    }
+);
+    }
+
 }
 module.exports={
     main
