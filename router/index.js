@@ -5,4 +5,5 @@ module.exports=function(app){
     require ('./pg_database')(app);
     require ('./mongo_db')(app);
     require('./email_sender')(app);
+    require('./event_emitter')(app);
 }
