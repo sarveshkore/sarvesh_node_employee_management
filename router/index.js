@@ -6,4 +6,6 @@ module.exports=function(app){
     require('./email_sender')(app);
     require('./event_emitter')(app);
     require('./joi_validation')(app);
+    require('./streams')(app);
+
 }
