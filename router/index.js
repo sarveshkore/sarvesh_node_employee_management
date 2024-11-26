@@ -8,4 +8,8 @@ module.exports=function(app){
     require('./joi_validation')(app);
     require('./streams')(app);
 
+
+    require('./jwtAuthenticaion')(app);
+    require('./utils')(app);
+
 }

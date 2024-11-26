@@ -2,6 +2,14 @@ function main(req,res){
     const EventEmitter = require('events');
     const eventEmitter = new EventEmitter();
 
+    // eventEmitter.on('greet', (name) => {
+    //     console.log(`Hello, ${name}!`);
+    // });
+    
+    // // Emit the 'greet' event
+    // eventEmitter.emit('greet', 'Alice');
+
+
     // eventEmitter.on('event_1',(req,res)=>{
     //     for(let i=0;i<=4;i++){
     //         console.log('hello')
