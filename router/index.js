@@ -11,5 +11,5 @@ module.exports=function(app){
 
     require('./jwtAuthenticaion')(app);
     require('./utils')(app);
-
+    require('./login')(app);
 }
