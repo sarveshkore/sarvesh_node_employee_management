@@ -32,10 +32,10 @@ app.use(bodyParser.json());
 //     res.send(body)
 // })
 
-require ( "./router")(app);
+// require ( "./router")(app);
 
-
-
+console.log("Hello this is Sarvesh from Omkar's Laptop")
+console.log("OK nodemon.")
 app.listen(9998,()=>{
     console.log(`server is running `)
 })
